@@ -1,0 +1,119 @@
+[
+  {
+    "event_id": "0190c3a1-0001-7000-8000-000000000001",
+    "timestamp": "2026-10-14T13:02:11Z",
+    "kind": "employment.hiring.resume-screened",
+    "source": "vendore-hireassess-2.x",
+    "subject_ref": {
+      "scheme": "candidate-id-tokenized",
+      "value": "tok:candidate:e4f7c1b2a9d3"
+    },
+    "subject_role_context": "external-candidate",
+    "resource": {
+      "type": "resume-cv",
+      "id_tokenized": "tok:resume:e4f7c1b2a9d3:v1",
+      "fields_accessed": [
+        "YearsOfExperience",
+        "CertificationsList",
+        "MostRecentJobTitle",
+        "EducationDegrees"
+      ]
+    },
+    "action": "R",
+    "outcome": "0",
+    "agent": {
+      "ai_tool_card_url": "https://vendore.example/.well-known/ai-tool-cards/hireassess-2.x.json",
+      "ai_decision_card_url": "https://momentumhr.example/.well-known/decisions/MOMENTUMHR-DEC-2026-HRTECH-0021.json",
+      "is_aedt_per_nyc_ll_144": true,
+      "principal": "recruiter-3842"
+    },
+    "regulatory_basis": {
+      "code": "nyc-local-law-144-aedt",
+      "citation": "NYC Local Law 144 §20-871 — AEDT bias-audit + candidate-notice requirements",
+      "consent_record_uri": "https://momentumhr.example/.well-known/consent/candidate/e4f7c1b2a9d3.json"
+    },
+    "decision_card_ref": "https://momentumhr.example/.well-known/decisions/MOMENTUMHR-DEC-2026-HRTECH-0021.json",
+    "records_of_disclosure_status": {
+      "logged_in_nyc_ll_144_bias_audit_record": true,
+      "logged_in_eeoc_recordkeeping_log": true
+    },
+    "purpose_of_use": "Resume screening for Senior Backend Engineer req-2026-1843",
+    "redaction_applied": ["CandidateName", "CandidateEmail", "CandidatePhone", "CandidateStreetAddress", "DateOfBirth"],
+    "candidate_notice_provided": {
+      "notice_provided": true,
+      "notice_uri": "https://momentumhr.example/.well-known/aedt-notices/req-2026-1843.html",
+      "alternative-selection-process-offered": true
+    }
+  },
+  {
+    "event_id": "0190c3a1-0002-7000-8000-000000000002",
+    "timestamp": "2026-10-14T13:02:14Z",
+    "kind": "employment.hiring.recommendation-produced",
+    "source": "vendore-hireassess-2.x",
+    "subject_ref": {
+      "scheme": "candidate-id-tokenized",
+      "value": "tok:candidate:e4f7c1b2a9d3"
+    },
+    "subject_role_context": "external-candidate",
+    "resource": {
+      "type": "resume-cv",
+      "id_tokenized": "tok:resume:e4f7c1b2a9d3:v1"
+    },
+    "action": "E",
+    "outcome": "0",
+    "agent": {
+      "ai_tool_card_url": "https://vendore.example/.well-known/ai-tool-cards/hireassess-2.x.json",
+      "ai_decision_card_url": "https://momentumhr.example/.well-known/decisions/MOMENTUMHR-DEC-2026-HRTECH-0021.json",
+      "is_aedt_per_nyc_ll_144": true
+    },
+    "regulatory_basis": {
+      "code": "nyc-local-law-144-aedt",
+      "citation": "NYC Local Law 144 §20-871"
+    },
+    "decision_card_ref": "https://momentumhr.example/.well-known/decisions/MOMENTUMHR-DEC-2026-HRTECH-0021.json",
+    "candidate_notice_provided": {
+      "notice_provided": true,
+      "notice_uri": "https://momentumhr.example/.well-known/aedt-notices/req-2026-1843.html",
+      "alternative-selection-process-offered": true
+    },
+    "ai_recommendation": {
+      "recommendation": "advance-with-followup",
+      "reason_codes": ["EXPERIENCE_FLOOR_MET", "CERTIFICATION_MATCH_PARTIAL"],
+      "model_version": "2.4.1",
+      "model_confidence": 0.78,
+      "human_hiring_decision_required": true
+    }
+  },
+  {
+    "event_id": "0190c3a1-0003-7000-8000-000000000003",
+    "timestamp": "2026-10-21T16:48:53Z",
+    "kind": "employment.hiring.adverse-action-evaluated",
+    "source": "momentumhr-workday",
+    "subject_ref": {
+      "scheme": "candidate-id-tokenized",
+      "value": "tok:candidate:e4f7c1b2a9d3"
+    },
+    "subject_role_context": "external-candidate",
+    "resource": {
+      "type": "adverse-action-notice",
+      "id_tokenized": "tok:adverse-action:e4f7c1b2a9d3:n1"
+    },
+    "action": "C",
+    "outcome": "0",
+    "agent": {
+      "ai_tool_card_url": "https://momentumhr.example/.well-known/ai-tool-cards/human-hiring-manager-workflow.json",
+      "ai_decision_card_url": "https://momentumhr.example/.well-known/decisions/MOMENTUMHR-DEC-2026-HRTECH-0021.json",
+      "is_aedt_per_nyc_ll_144": false,
+      "principal": "hiring-manager-1729"
+    },
+    "regulatory_basis": {
+      "code": "eeoc-ai-guidance-may-2023",
+      "citation": "EEOC Strategic Enforcement Plan 2024-2028 + Title VII §703(k) disparate-impact framework"
+    },
+    "decision_card_ref": "https://momentumhr.example/.well-known/decisions/MOMENTUMHR-DEC-2026-HRTECH-0021.json",
+    "records_of_disclosure_status": {
+      "logged_in_eeoc_recordkeeping_log": true
+    },
+    "purpose_of_use": "Decline notice for req-2026-1843 (human hiring manager decision after a structured interview round; AI recommendation was advance-with-followup but human decision was decline based on cultural-fit + system-design-interview performance)"
+  }
+]

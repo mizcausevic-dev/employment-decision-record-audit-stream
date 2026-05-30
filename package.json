@@ -1,0 +1,16 @@
+{
+  "name": "employment-decision-record-audit-stream",
+  "version": "0.1.0",
+  "description": "HR Tech audit-stream Operator: per-hiring / promotion / performance / termination AI tool access events hash-chained for EEOC + ADA + Title VII + NYC LL 144 + IL AI Video Interview Act + MD HB 1202 + state-AI-law evidence.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:examples": "node src/build-examples.mjs",
+    "verify": "node src/verify.mjs examples/momentumhr-hiring-2026q4-stream.ndjson",
+    "test": "npm run build:examples && npm run verify"
+  },
+  "dependencies": {
+    "ajv": "^8.17.0",
+    "ajv-formats": "^3.0.1"
+  }
+}
